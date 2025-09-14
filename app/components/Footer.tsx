@@ -240,7 +240,7 @@ export default function Footer() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              © 2025 MESHY LLC. ALL RIGHTS RESERVED
+              © 2025 SIMULATRIX. ALL RIGHTS RESERVED
             </motion.div>
 
             {/* Legal Links */}
