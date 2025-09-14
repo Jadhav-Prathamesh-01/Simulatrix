@@ -61,6 +61,12 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
     stack = error.stack;
   }
 
+  // For 404 errors, redirect to our custom 404 page
+  if (isRouteErrorResponse(error) && error.status === 404) {
+    window.location.href = '/404';
+    return null;
+  }
+
   return (
     <main className="pt-16 p-4 container mx-auto">
       <h1>{message}</h1>

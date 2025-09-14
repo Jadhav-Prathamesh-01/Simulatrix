@@ -189,26 +189,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* ISO Certification */}
-          <div className="flex flex-col items-start">
-            <motion.div
-              className="bg-gradient-to-br from-purple-600 to-purple-800 rounded-xl p-4 mb-6"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <div className="text-center">
-                <div className="text-purple-200 text-xs font-semibold mb-1">PRESCIENT SECURITY</div>
-                <div className="text-white font-bold text-lg">ISO/IEC 27001:2022</div>
-                <div className="text-purple-200 text-xs mt-1">CERTIFIED</div>
-                <div className="text-[#ffb71b] text-xs mt-2 flex items-center justify-center">
-                  <span>✓</span>
-                  <span className="ml-1">verify</span>
-                </div>
-              </div>
-            </motion.div>
-          </div>
         </div>
 
         {/* Bottom Section */}
