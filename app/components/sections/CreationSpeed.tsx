@@ -14,10 +14,10 @@ export default function CreationSpeed() {
             viewport={{ once: true }}
           >
             <div className="flex items-center mb-6">
-              <div className="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center mr-3">
+              <div className="w-8 h-8 bg-[#ffb71b] rounded-lg flex items-center justify-center mr-3">
                 <Zap className="w-5 h-5 text-white" />
               </div>
-              <span className="text-green-400 font-semibold">Creation Speed</span>
+              <span className="text-[#ffb71b] font-semibold">Creation Speed</span>
             </div>
             
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
@@ -74,7 +74,7 @@ export default function CreationSpeed() {
                 </div>
                 
                 {/* Upload Area */}
-                <div className="border-2 border-dashed border-gray-600 rounded-xl p-6 mb-4 hover:border-green-500 transition-colors duration-300 cursor-pointer">
+                <div className="border-2 border-dashed border-gray-600 rounded-xl p-6 mb-4 hover:border-[#ffb71b] transition-colors duration-300 cursor-pointer">
                   <div className="text-center">
                     <Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" />
                     <p className="text-gray-400 text-sm">Click / Drag & Drop / Paste Image</p>
@@ -83,7 +83,7 @@ export default function CreationSpeed() {
                 
                 {/* Generate Button */}
                 <motion.button
-                  className="w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg font-semibold flex items-center justify-center space-x-2 transition-all duration-300"
+                  className="w-full bg-[#ffb71b] hover:bg-[#e6a517] text-white py-3 rounded-lg font-semibold flex items-center justify-center space-x-2 transition-all duration-300"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -129,7 +129,7 @@ export default function CreationSpeed() {
 
           {/* Smart Remesh */}
           <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 group">
-            <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <div className="w-12 h-12 bg-gradient-to-br from-[#ffb71b] to-[#e6a517] rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
               <span className="text-white font-bold text-lg">∞</span>
             </div>
             <h3 className="text-xl font-bold text-white mb-4">Smart Remesh</h3>

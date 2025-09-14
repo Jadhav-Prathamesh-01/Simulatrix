@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Menu, X, ChevronDown, Globe } from 'lucide-react';
+import { Menu, X, ChevronDown, Globe, User, LogOut } from 'lucide-react';
+import { Link } from 'react-router';
 
 interface DropdownItem {
   name: string;
@@ -17,6 +18,28 @@ interface NavigationItem {
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [user, setUser] = useState<any>(null);
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    const userData = localStorage.getItem('user');
+    
+    if (token && userData) {
+      try {
+        setUser(JSON.parse(userData));
+      } catch (error) {
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+      }
+    }
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    setUser(null);
+    window.location.href = '/';
+  };
 
   const navigationItems: NavigationItem[] = [
     { 
@@ -68,14 +91,14 @@ export default function Header() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-gradient-to-br from-[#ffb71b] to-[#e6a517] rounded-lg flex items-center justify-center">
               <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
                 <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
                 <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
               </svg>
             </div>
-            <span className="text-xl font-bold text-white">Meshy</span>
+            <span className="text-xl font-bold text-white">SIMULATRIX</span>
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -85,7 +108,7 @@ export default function Header() {
                 {item.hasDropdown ? (
                   <button
                     onClick={() => toggleDropdown(item.name)}
-                    className="flex items-center space-x-1 text-white hover:text-green-400 transition-colors duration-200"
+                    className="flex items-center space-x-1 text-white hover:text-[#ffb71b] transition-colors duration-200"
                   >
                     <span>{item.name}</span>
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${openDropdown === item.name ? 'rotate-180' : ''}`} />
@@ -93,7 +116,7 @@ export default function Header() {
                 ) : (
                   <a
                     href={item.href}
-                    className="flex items-center space-x-1 text-white hover:text-green-400 transition-colors duration-200"
+                    className="flex items-center space-x-1 text-white hover:text-[#ffb71b] transition-colors duration-200"
                   >
                     <span>{item.name}</span>
                   </a>
@@ -143,7 +166,7 @@ export default function Header() {
                           href={dropdownItem.href} 
                           className="flex items-center px-2 py-3 text-sm text-white hover:bg-white/10 transition-colors duration-200 rounded-lg"
                         >
-                          <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                          <span className="w-2 h-2 bg-[#ffb71b] rounded-full mr-3"></span>
                           {dropdownItem.name}
                         </a>
                       ))}
@@ -156,24 +179,49 @@ export default function Header() {
 
           {/* Right Side Actions */}
           <div className="flex items-center space-x-4">
-            <div className="hidden md:flex items-center space-x-4">
-              <button className="text-white hover:text-green-400 transition-colors duration-200">
-                Contact Sales
-              </button>
-              <button className="text-white hover:text-green-400 transition-colors duration-200">
-                Log In
-              </button>
-            </div>
+            {user ? (
+              // Authenticated user
+              <div className="hidden md:flex items-center space-x-4">
+                <div className="flex items-center space-x-2 text-white">
+                  <User className="w-5 h-5" />
+                  <span className="text-sm">{user.name}</span>
+                </div>
+                <button 
+                  onClick={handleLogout}
+                  className="text-white hover:text-[#ffb71b] transition-colors duration-200 flex items-center space-x-1"
+                >
+                  <LogOut className="w-4 h-4" />
+                  <span>Logout</span>
+                </button>
+              </div>
+            ) : (
+              // Non-authenticated user
+              <div className="hidden md:flex items-center space-x-4">
+                <button className="text-white hover:text-[#ffb71b] transition-colors duration-200">
+                  Contact Sales
+                </button>
+                <Link
+                  to="/login"
+                  className="text-white hover:text-[#ffb71b] transition-colors duration-200"
+                >
+                  Log In
+                </Link>
+              </div>
+            )}
             
-            <motion.button
-              className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-green-500/25"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Sign Up Free
-            </motion.button>
+            {!user && (
+              <Link to="/register">
+                <motion.button
+                  className="bg-[#ffb71b] hover:bg-[#e6a517] text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-[#ffb71b]/25"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Sign Up Free
+                </motion.button>
+              </Link>
+            )}
             
-            <button className="text-white hover:text-green-400 transition-colors duration-200">
+            <button className="text-white hover:text-[#ffb71b] transition-colors duration-200">
               <Globe className="w-5 h-5" />
             </button>
 
@@ -224,12 +272,39 @@ export default function Header() {
                 </div>
               ))}
               <div className="pt-4 border-t border-white/10 space-y-2">
-                <button className="block w-full text-left px-4 py-2 text-white hover:bg-white/10 rounded-lg">
-                  Contact Sales
-                </button>
-                <button className="block w-full text-left px-4 py-2 text-white hover:bg-white/10 rounded-lg">
-                  Log In
-                </button>
+                {user ? (
+                  <>
+                    <div className="px-4 py-2 text-white flex items-center space-x-2">
+                      <User className="w-5 h-5" />
+                      <span>{user.name}</span>
+                    </div>
+                    <button 
+                      onClick={handleLogout}
+                      className="block w-full text-left px-4 py-2 text-white hover:bg-white/10 rounded-lg flex items-center space-x-2"
+                    >
+                      <LogOut className="w-4 h-4" />
+                      <span>Logout</span>
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <button className="block w-full text-left px-4 py-2 text-white hover:bg-white/10 rounded-lg">
+                      Contact Sales
+                    </button>
+                    <Link
+                      to="/login"
+                      className="block w-full text-left px-4 py-2 text-white hover:bg-white/10 rounded-lg"
+                    >
+                      Log In
+                    </Link>
+                    <Link
+                      to="/register"
+                      className="block w-full text-left px-4 py-2 bg-[#ffb71b] text-white hover:bg-[#e6a517] rounded-lg text-center font-medium"
+                    >
+                      Sign Up Free
+                    </Link>
+                  </>
+                )}
               </div>
             </div>
           </motion.div>

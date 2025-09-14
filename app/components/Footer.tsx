@@ -67,15 +67,15 @@ export default function Footer() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-br from-[#ffb71b] to-[#e6a517] rounded-lg flex items-center justify-center">
                 <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
                   <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
                   <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
                 </svg>
               </div>
-              <span className="text-xl font-bold text-white">Meshy</span>
-              <span className="bg-green-600 text-white text-xs px-2 py-1 rounded-full font-semibold">HIRING</span>
+              <span className="text-xl font-bold text-white">SIMULATRIX</span>
+              <span className="bg-[#ffb71b] text-white text-xs px-2 py-1 rounded-full font-semibold">HIRING</span>
             </motion.div>
             
             <div className="space-y-2">
@@ -202,7 +202,7 @@ export default function Footer() {
                 <div className="text-purple-200 text-xs font-semibold mb-1">PRESCIENT SECURITY</div>
                 <div className="text-white font-bold text-lg">ISO/IEC 27001:2022</div>
                 <div className="text-purple-200 text-xs mt-1">CERTIFIED</div>
-                <div className="text-green-400 text-xs mt-2 flex items-center justify-center">
+                <div className="text-[#ffb71b] text-xs mt-2 flex items-center justify-center">
                   <span>✓</span>
                   <span className="ml-1">verify</span>
                 </div>

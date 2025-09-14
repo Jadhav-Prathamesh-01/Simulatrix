@@ -14,10 +14,10 @@ export default function FineTunedControl() {
           viewport={{ once: true }}
         >
           <div className="flex items-center justify-center mb-6">
-            <div className="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center mr-3">
+            <div className="w-8 h-8 bg-[#ffb71b] rounded-lg flex items-center justify-center mr-3">
               <Settings className="w-5 h-5 text-white" />
             </div>
-            <span className="text-green-400 font-semibold">Fine-tuned Control</span>
+            <span className="text-[#ffb71b] font-semibold">Fine-tuned Control</span>
           </div>
           
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
@@ -68,12 +68,12 @@ export default function FineTunedControl() {
             {/* Controls */}
             <div className="flex items-center justify-between mb-6">
               <label className="flex items-center space-x-2">
-                <input type="checkbox" className="w-4 h-4 text-green-500 bg-gray-700 border-gray-600 rounded" defaultChecked />
+                <input type="checkbox" className="w-4 h-4 text-[#ffb71b] bg-gray-700 border-gray-600 rounded" defaultChecked />
                 <span className="text-gray-300 text-sm">Generate Multi-view</span>
               </label>
               
               <motion.button
-                className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg font-medium flex items-center space-x-2 transition-all duration-300"
+                className="bg-[#ffb71b] hover:bg-[#e6a517] text-white px-6 py-2 rounded-lg font-medium flex items-center space-x-2 transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -179,7 +179,7 @@ export default function FineTunedControl() {
           {/* Free Retry */}
           <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300">
             <div className="flex items-center mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-green-700 rounded-lg flex items-center justify-center mr-4">
+              <div className="w-10 h-10 bg-gradient-to-br from-[#ffb71b] to-[#e6a517] rounded-lg flex items-center justify-center mr-4">
                 <Sparkles className="w-5 h-5 text-white" />
               </div>
               <h3 className="text-xl font-bold text-white">Free Retry</h3>

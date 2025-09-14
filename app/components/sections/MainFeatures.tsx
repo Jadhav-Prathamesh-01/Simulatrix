@@ -75,7 +75,7 @@ export default function MainFeatures() {
                   
                   {/* Content */}
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-green-400 transition-colors duration-300">
+                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-[#ffb71b] transition-colors duration-300">
                       {feature.title}
                     </h3>
                     <p className="text-gray-300 leading-relaxed mb-6">
@@ -90,8 +90,8 @@ export default function MainFeatures() {
                             <button
                               key={controlIndex}
                               className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-                                control.variant === 'primary' 
-                                  ? 'bg-green-500 hover:bg-green-600 text-white' 
+                                'variant' in control && control.variant === 'primary' 
+                                  ? 'bg-[#ffb71b] hover:bg-[#e6a517] text-white' 
                                   : 'bg-gray-700 hover:bg-gray-600 text-white'
                               }`}
                             >
@@ -101,10 +101,10 @@ export default function MainFeatures() {
                             <div key={controlIndex} className="flex items-center space-x-2">
                               <span className="text-gray-300 text-sm">{control.label}</span>
                               <div className={`w-12 h-6 rounded-full relative transition-colors duration-300 ${
-                                control.active ? 'bg-green-500' : 'bg-gray-600'
+                                'active' in control && control.active ? 'bg-[#ffb71b]' : 'bg-gray-600'
                               }`}>
                                 <div className={`w-5 h-5 bg-white rounded-full absolute top-0.5 transition-transform duration-300 ${
-                                  control.active ? 'translate-x-6' : 'translate-x-0.5'
+                                  'active' in control && control.active ? 'translate-x-6' : 'translate-x-0.5'
                                 }`}></div>
                               </div>
                             </div>
@@ -131,7 +131,7 @@ export default function MainFeatures() {
               >
                 <div className="flex flex-col lg:flex-row items-start space-y-6 lg:space-y-0 lg:space-x-6">
                   {/* Feature Image */}
-                  <div className="w-full lg:w-64 h-48 bg-gradient-to-br from-green-500 to-green-700 rounded-xl overflow-hidden group-hover:scale-105 transition-transform duration-300">
+                  <div className="w-full lg:w-64 h-48 bg-gradient-to-br from-[#ffb71b] to-[#e6a517] rounded-xl overflow-hidden group-hover:scale-105 transition-transform duration-300">
                     {index === 0 && (
                       <img 
                         src="https://cdn.meshy.ai/landing-assets/home/feature-hero-smart-remesh.webp"
@@ -150,7 +150,7 @@ export default function MainFeatures() {
                   
                   {/* Content */}
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-green-400 transition-colors duration-300">
+                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-[#ffb71b] transition-colors duration-300">
                       {feature.title}
                     </h3>
                     <p className="text-gray-300 leading-relaxed">
@@ -193,14 +193,14 @@ export default function MainFeatures() {
             </p>
           </div>
 
-          {/* Animation Library */}
+          {/* Simulation Library */}
           <div className="text-center">
-            <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-700 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <div className="w-16 h-16 bg-gradient-to-br from-[#ffb71b] to-[#e6a517] rounded-2xl flex items-center justify-center mx-auto mb-6">
               <Play className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-xl font-bold text-white mb-4">Animation Library</h3>
+            <h3 className="text-xl font-bold text-white mb-4">Simulation Library</h3>
             <p className="text-gray-300 leading-relaxed">
-              Meshy's animation library offers 500+ game-ready motions—from basic walks and jumps to complex shooting stances, fights, and dance moves.
+              SIMULATRIX's simulation library offers 500+ game-ready motions—from basic walks and jumps to complex shooting stances, fights, and dance moves.
             </p>
           </div>
         </motion.div>

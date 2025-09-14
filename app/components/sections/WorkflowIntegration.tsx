@@ -8,7 +8,7 @@ export default function WorkflowIntegration() {
     { name: "Maya", logo: "🔵", color: "from-blue-500 to-blue-600" },
     { name: "Godot", logo: "🟦", color: "from-blue-400 to-blue-500" },
     { name: "Unreal", logo: "⚫", color: "from-gray-800 to-black" },
-    { name: "Bambu", logo: "🟢", color: "from-green-500 to-green-600" }
+    { name: "Bambu", logo: "🟢", color: "from-[#ffb71b] to-[#e6a517]" }
   ];
 
   return (
@@ -23,10 +23,10 @@ export default function WorkflowIntegration() {
           viewport={{ once: true }}
         >
           <div className="flex items-center justify-center mb-6">
-            <div className="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center mr-3">
+            <div className="w-8 h-8 bg-[#ffb71b] rounded-lg flex items-center justify-center mr-3">
               <Workflow className="w-5 h-5 text-white" />
             </div>
-            <span className="text-green-400 font-semibold">Workflow Integration</span>
+            <span className="text-[#ffb71b] font-semibold">Workflow Integration</span>
           </div>
           
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
@@ -77,7 +77,7 @@ export default function WorkflowIntegration() {
               
               {/* Code Example */}
               <div className="bg-black/50 rounded-xl p-4 border border-white/20">
-                <pre className="text-green-400 text-sm">
+                <pre className="text-[#ffb71b] text-sm">
                   <code>{`const response = await fetch(
   'https://api.meshy.ai/v1/text-to-3d',
   {

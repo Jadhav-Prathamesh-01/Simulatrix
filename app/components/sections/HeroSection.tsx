@@ -51,7 +51,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <motion.button
-              className="inline-flex items-center space-x-3 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-2xl hover:shadow-green-500/25"
+              className="inline-flex items-center space-x-3 bg-gradient-to-r from-[#ffb71b] to-[#e6a517] hover:from-[#e6a517] hover:to-[#cc8f14] text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-2xl hover:shadow-[#ffb71b]/25"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -62,30 +62,11 @@ export default function HeroSection() {
 
         {/* 3D Models Showcase */}
         <motion.div
-          className="mt-20 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto"
+          className="mt-20 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-5xl mx-auto"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.8 }}
         >
-          {/* Film Production */}
-          <motion.div
-            className="relative group cursor-pointer"
-            whileHover={{ scale: 1.05, y: -10 }}
-            transition={{ duration: 0.3 }}
-          >
-            <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl h-48 flex items-center justify-center relative overflow-hidden">
-              <img 
-                src="https://cdn.meshy.ai/landing-assets/home/meshy-use-case-hero-film-production.webp"
-                alt="Film Production"
-                className="w-full h-full object-cover rounded-2xl"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-2xl"></div>
-              <div className="absolute bottom-4 left-4 right-4 text-center">
-                <span className="text-white text-sm font-medium drop-shadow-lg">Film Production</span>
-              </div>
-            </div>
-          </motion.div>
-
           {/* Product Design */}
           <motion.div
             className="relative group cursor-pointer"
@@ -120,25 +101,6 @@ export default function HeroSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-2xl"></div>
               <div className="absolute bottom-4 left-4 right-4 text-center">
                 <span className="text-white text-sm font-medium drop-shadow-lg">Education</span>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Game Development */}
-          <motion.div
-            className="relative group cursor-pointer"
-            whileHover={{ scale: 1.05, y: -10 }}
-            transition={{ duration: 0.3 }}
-          >
-            <div className="bg-gradient-to-br from-green-500 to-green-700 rounded-2xl h-48 flex items-center justify-center relative overflow-hidden">
-              <img 
-                src="https://cdn.meshy.ai/landing-assets/home/meshy-use-case-game-development.webp"
-                alt="Game Development"
-                className="w-full h-full object-cover rounded-2xl"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-2xl"></div>
-              <div className="absolute bottom-4 left-4 right-4 text-center">
-                <span className="text-white text-sm font-medium drop-shadow-lg">Game Development</span>
               </div>
             </div>
           </motion.div>

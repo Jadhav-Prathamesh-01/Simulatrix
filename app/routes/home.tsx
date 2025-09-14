@@ -14,7 +14,7 @@ import Footer from "../components/Footer";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Meshy AI - Free Image to 3D Model Generator" },
+    { title: "SIMULATRIX - Free Image to 3D Model Generator" },
     { name: "description", content: "Create 3D models from text and images with AI. Transform text and images into stunning 3D models in seconds with our text & image to 3D model tool—no experience required!" },
   ];
 }

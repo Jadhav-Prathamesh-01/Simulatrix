@@ -125,7 +125,7 @@ export default function Testimonials() {
                 </h3>
                 
                 <motion.button
-                  className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-2xl hover:shadow-green-500/25 flex items-center space-x-3 mx-auto"
+                  className="bg-gradient-to-r from-[#ffb71b] to-[#e6a517] hover:from-[#e6a517] hover:to-[#cc8f14] text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-2xl hover:shadow-[#ffb71b]/25 flex items-center space-x-3 mx-auto"
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                 >

@@ -23,7 +23,7 @@ export default function CreativeFlexibility() {
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 to-black relative overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-green-500/5 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#ffb71b]/5 to-transparent"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Header */}
@@ -35,10 +35,10 @@ export default function CreativeFlexibility() {
           viewport={{ once: true }}
         >
           <div className="flex items-center justify-center mb-6">
-            <div className="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center mr-3">
+            <div className="w-8 h-8 bg-[#ffb71b] rounded-lg flex items-center justify-center mr-3">
               <Wrench className="w-5 h-5 text-white" />
             </div>
-            <span className="text-green-400 font-semibold">Creative Flexibility</span>
+            <span className="text-[#ffb71b] font-semibold">Creative Flexibility</span>
           </div>
           
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
@@ -63,7 +63,7 @@ export default function CreativeFlexibility() {
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-700 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 overflow-hidden">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#ffb71b] to-[#e6a517] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 overflow-hidden">
                 {index === 0 && (
                   <img 
                     src="https://cdn.meshy.ai/landing-assets/home/feature-icon-prompt-helper.webp"
@@ -87,7 +87,7 @@ export default function CreativeFlexibility() {
                 )}
               </div>
               
-              <h3 className="text-xl font-bold text-white mb-4 group-hover:text-green-400 transition-colors duration-300">
+              <h3 className="text-xl font-bold text-white mb-4 group-hover:text-[#ffb71b] transition-colors duration-300">
                 {feature.title}
               </h3>
               
@@ -135,12 +135,12 @@ export default function CreativeFlexibility() {
                 
                 <div className="flex items-center justify-between">
                   <label className="flex items-center space-x-2">
-                    <input type="checkbox" className="w-4 h-4 text-green-500 bg-gray-700 border-gray-600 rounded" defaultChecked />
+                    <input type="checkbox" className="w-4 h-4 text-[#ffb71b] bg-gray-700 border-gray-600 rounded" defaultChecked />
                     <span className="text-gray-300 text-sm">Generate Multi-view</span>
                   </label>
                   
                   <motion.button
-                    className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg font-medium flex items-center space-x-2 transition-all duration-300"
+                    className="bg-[#ffb71b] hover:bg-[#e6a517] text-white px-6 py-2 rounded-lg font-medium flex items-center space-x-2 transition-all duration-300"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >

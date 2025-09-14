@@ -4,12 +4,6 @@ import { Users, Zap, TrendingUp, Handshake } from 'lucide-react';
 export default function FeaturesShowcase() {
   const features = [
     {
-      icon: Users,
-      title: "3D Content Creation Democratized",
-      description: "Empower anyone to create production-ready 3D assets from a simple text prompt or reference images in seconds, no need for learning specialized modeling skills.",
-      gradient: "from-teal-500 to-blue-500"
-    },
-    {
       icon: Zap,
       title: "10x Faster Than Traditional Methods",
       description: "Reduce hours or days of manual modeling and texturing to mere minutes, lightning fast generation speed saves you time in the development cycle and ensures your projects stay on schedule.",
@@ -26,10 +20,7 @@ export default function FeaturesShowcase() {
   const partners = [
     { name: "KIRI Engine", logo: "🔧" },
     { name: "byrst", logo: "⚡" },
-    { name: "SUPERCELL", logo: "🎮" },
-    { name: "FUNPLUS", logo: "🎯" },
     { name: "houzz", logo: "🏠" },
-    { name: "YAHAHA", logo: "🎪" },
     { name: "chitubox", logo: "📦" },
     { name: "ELEGCO", logo: "🖨️" }
   ];
@@ -41,7 +32,7 @@ export default function FeaturesShowcase() {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Features Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-20">
+        <div className="grid md:grid-cols-2 gap-8 mb-20">
           {features.map((feature, index) => (
             <motion.div
               key={index}
@@ -51,7 +42,7 @@ export default function FeaturesShowcase() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
             >
-              <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 h-full border border-white/10 hover:border-white/20 transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-green-500/10">
+              <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 h-full border border-white/10 hover:border-white/20 transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-[#ffb71b]/10">
                 {/* Benefit Image */}
                 <div className={`w-full h-48 bg-gradient-to-br ${feature.gradient} rounded-xl flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300 overflow-hidden`}>
                   {index === 0 && (
@@ -78,7 +69,7 @@ export default function FeaturesShowcase() {
                 </div>
                 
                 {/* Content */}
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-green-400 transition-colors duration-300">
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-[#ffb71b] transition-colors duration-300">
                   {feature.title}
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
@@ -98,7 +89,7 @@ export default function FeaturesShowcase() {
           viewport={{ once: true }}
         >
           <div className="flex items-center justify-center mb-8">
-            <div className="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center mr-4">
+            <div className="w-8 h-8 bg-[#ffb71b] rounded-lg flex items-center justify-center mr-4">
               <Handshake className="w-5 h-5 text-white" />
             </div>
             <h2 className="text-2xl font-bold text-white">
