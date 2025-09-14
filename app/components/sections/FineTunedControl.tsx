@@ -31,7 +31,7 @@ export default function FineTunedControl() {
         </motion.div>
 
         {/* Main Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Left Side - Text to Image */}
           <motion.div
             className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300"
@@ -125,29 +125,29 @@ export default function FineTunedControl() {
             </p>
             
             {/* Multi-view Images */}
-            <div className="flex space-x-2 mb-6">
+            <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-6">
               <img 
                 src="https://cdn.meshy.ai/landing-assets/home/feature-hero-image-to-3d-1.webp"
                 alt="Front View"
-                className="flex-1 aspect-square bg-gradient-to-br from-blue-400 to-purple-600 rounded-lg object-cover"
+                className="w-full aspect-square bg-gradient-to-br from-blue-400 to-purple-600 rounded-lg object-cover"
               />
               <img 
                 src="https://cdn.meshy.ai/landing-assets/home/feature-hero-image-to-3d-2.webp"
                 alt="Side View"
-                className="flex-1 aspect-square bg-gradient-to-br from-blue-400 to-purple-600 rounded-lg object-cover"
+                className="w-full aspect-square bg-gradient-to-br from-blue-400 to-purple-600 rounded-lg object-cover"
               />
               <img 
                 src="https://cdn.meshy.ai/landing-assets/home/feature-hero-image-to-3d-1-m.webp"
                 alt="Back View"
-                className="flex-1 aspect-square bg-gradient-to-br from-blue-400 to-purple-600 rounded-lg object-cover"
+                className="w-full aspect-square bg-gradient-to-br from-blue-400 to-purple-600 rounded-lg object-cover"
               />
             </div>
             
             {/* 3D Model Display */}
             <div className="relative">
-              <div className="bg-gradient-to-br from-blue-900 to-purple-900 rounded-xl p-6 min-h-[200px] flex items-center justify-center">
+              <div className="bg-gradient-to-br from-blue-900 to-purple-900 rounded-xl p-4 sm:p-6 min-h-[180px] sm:min-h-[200px] flex items-center justify-center">
                 <motion.div
-                  className="w-32 h-32 bg-gradient-to-br from-blue-400 to-purple-600 rounded-xl shadow-2xl relative overflow-hidden"
+                  className="w-24 h-24 sm:w-32 sm:h-32 bg-gradient-to-br from-blue-400 to-purple-600 rounded-xl shadow-2xl relative overflow-hidden"
                   animate={{ 
                     rotateY: [0, 360],
                     scale: [1, 1.05, 1]
@@ -160,7 +160,7 @@ export default function FineTunedControl() {
                   {/* Split view effect */}
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
                   <div className="w-full h-full bg-gradient-to-br from-blue-300 to-purple-400 rounded-xl flex items-center justify-center">
-                    <span className="text-2xl">🧊</span>
+                    <span className="text-lg sm:text-2xl">🧊</span>
                   </div>
                 </motion.div>
               </div>

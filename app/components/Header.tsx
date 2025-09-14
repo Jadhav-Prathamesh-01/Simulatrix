@@ -210,7 +210,7 @@ export default function Header() {
             )}
             
             {!user && (
-              <Link to="/register">
+              <Link to="/register" className="hidden md:block">
                 <motion.button
                   className="bg-[#ffb71b] hover:bg-[#e6a517] text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-[#ffb71b]/25"
                   whileHover={{ scale: 1.05 }}
@@ -221,7 +221,7 @@ export default function Header() {
               </Link>
             )}
             
-            <button className="text-white hover:text-[#ffb71b] transition-colors duration-200">
+            <button className="hidden md:block text-white hover:text-[#ffb71b] transition-colors duration-200">
               <Globe className="w-5 h-5" />
             </button>
 
@@ -285,6 +285,10 @@ export default function Header() {
                       <LogOut className="w-4 h-4" />
                       <span>Logout</span>
                     </button>
+                    <button className="block w-full text-left px-4 py-2 text-white hover:bg-white/10 rounded-lg flex items-center space-x-2">
+                      <Globe className="w-4 h-4" />
+                      <span>Language</span>
+                    </button>
                   </>
                 ) : (
                   <>
@@ -303,6 +307,10 @@ export default function Header() {
                     >
                       Sign Up Free
                     </Link>
+                    <button className="block w-full text-left px-4 py-2 text-white hover:bg-white/10 rounded-lg flex items-center space-x-2">
+                      <Globe className="w-4 h-4" />
+                      <span>Language</span>
+                    </button>
                   </>
                 )}
               </div>

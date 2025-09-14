@@ -40,7 +40,7 @@ export default function WorkflowIntegration() {
         </motion.div>
 
         {/* Main Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* API Platform */}
           <motion.div
             className="relative bg-gradient-to-br from-blue-900 to-teal-900 rounded-3xl p-8 overflow-hidden"
@@ -76,8 +76,8 @@ export default function WorkflowIntegration() {
               </p>
               
               {/* Code Example */}
-              <div className="bg-black/50 rounded-xl p-4 border border-white/20">
-                <pre className="text-[#ffb71b] text-sm">
+              <div className="bg-black/50 rounded-xl p-3 sm:p-4 border border-white/20 overflow-x-auto">
+                <pre className="text-[#ffb71b] text-xs sm:text-sm whitespace-pre-wrap break-words">
                   <code>{`const response = await fetch(
   'https://api.meshy.ai/v1/text-to-3d',
   {
@@ -132,21 +132,21 @@ export default function WorkflowIntegration() {
               </p>
               
               {/* Platform Logos */}
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
                 {platforms.map((platform, index) => (
                   <motion.div
                     key={platform.name}
-                    className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/20 transition-all duration-300 cursor-pointer"
+                    className="bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 text-center hover:bg-white/20 transition-all duration-300 cursor-pointer"
                     whileHover={{ scale: 1.05, y: -5 }}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: index * 0.1 }}
                     viewport={{ once: true }}
                   >
-                    <div className={`w-12 h-12 bg-gradient-to-br ${platform.color} rounded-lg flex items-center justify-center mx-auto mb-2`}>
-                      <span className="text-2xl">{platform.logo}</span>
+                    <div className={`w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br ${platform.color} rounded-lg flex items-center justify-center mx-auto mb-2`}>
+                      <span className="text-lg sm:text-2xl">{platform.logo}</span>
                     </div>
-                    <span className="text-white text-sm font-medium">{platform.name}</span>
+                    <span className="text-white text-xs sm:text-sm font-medium">{platform.name}</span>
                   </motion.div>
                 ))}
               </div>
