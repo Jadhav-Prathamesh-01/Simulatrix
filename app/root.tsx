@@ -63,7 +63,9 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
 
   // For 404 errors, redirect to our custom 404 page
   if (isRouteErrorResponse(error) && error.status === 404) {
-    window.location.href = '/404';
+    if (typeof window !== 'undefined') {
+      window.location.href = '/404';
+    }
     return null;
   }
 
