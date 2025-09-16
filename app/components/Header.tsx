@@ -197,9 +197,9 @@ export default function Header() {
             ) : (
               // Non-authenticated user
               <div className="hidden md:flex items-center space-x-4">
-                <button className="text-white hover:text-[#ffb71b] transition-colors duration-200">
+                <a href="/contact" className="text-white hover:text-[#ffb71b] transition-colors duration-200">
                   Contact Sales
-                </button>
+                </a>
                 <Link
                   to="/login"
                   className="text-white hover:text-[#ffb71b] transition-colors duration-200"
@@ -292,9 +292,9 @@ export default function Header() {
                   </>
                 ) : (
                   <>
-                    <button className="block w-full text-left px-4 py-2 text-white hover:bg-white/10 rounded-lg">
+                    <a href="/contact" className="block w-full text-left px-4 py-2 text-white hover:bg-white/10 rounded-lg">
                       Contact Sales
-                    </button>
+                    </a>
                     <Link
                       to="/login"
                       className="block w-full text-left px-4 py-2 text-white hover:bg-white/10 rounded-lg"

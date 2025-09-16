@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { Check, Star, Zap, Crown, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 interface PricingPlan {
   name: string;
@@ -83,9 +85,10 @@ const pricingPlans: PricingPlan[] = [
 
 export default function Pricing() {
   return (
-    <div className="min-h-screen bg-black text-white pt-16">
+    <div className="min-h-screen bg-black text-white">
+      <Header />
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 pt-32">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -262,6 +265,8 @@ export default function Pricing() {
           </motion.div>
         </div>
       </section>
+      
+      <Footer />
     </div>
   );
 }
